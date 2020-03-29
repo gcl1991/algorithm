@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1a3b6086-4b07-4fc1-99a3-aa8f1a8d9b4a" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1Z6KlEqjom6SvHtr0PxbFj2IhZe" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../language/java/corejava_mooc/MOOC19-02/pom.xml" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\learn\algorithm\data_structure_and_algorithm_analysis_java3th\v01\src\main\resources" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\learn\algorithm\data_structure_and_algorithm_analysis_java3th\v01\src\test\resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.G1_2Test.isExistWordTest">
+    <configuration name="G1_2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="G1_2" />
+      <module name="v01" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="G1_3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="G1_3" />
+      <module name="v01" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="G1_2Test.isExistWordTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="v01" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="G1_2Test" />
+      <option name="METHOD_NAME" value="isExistWordTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="G1_3Test.printDoubleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="v01" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="G1_3Test" />
+      <option name="METHOD_NAME" value="printDoubleTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="G1_3Test.printIntTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="v01" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="G1_3Test" />
+      <option name="METHOD_NAME" value="printIntTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.G1_2Test.isExistWordTest" />
+        <item itemvalue="JUnit.G1_3Test.printDoubleTest" />
+        <item itemvalue="JUnit.G1_3Test.printIntTest" />
+        <item itemvalue="Application.G1_3" />
+        <item itemvalue="Application.G1_2" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1a3b6086-4b07-4fc1-99a3-aa8f1a8d9b4a" name="Default Changelist" comment="" />
+      <created>1584154252017</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1584154252017</updated>
+      <workItem from="1584154255625" duration="39000" />
+      <workItem from="1584154308411" duration="26000" />
+      <workItem from="1584844767974" duration="137000" />
+      <workItem from="1585010850500" duration="2179000" />
+      <workItem from="1585090009507" duration="10224000" />
+      <workItem from="1585133621593" duration="53000" />
+      <workItem from="1585176801670" duration="9895000" />
+      <workItem from="1585223479232" duration="635000" />
+      <workItem from="1585264912136" duration="7559000" />
+      <workItem from="1585361424553" duration="4592000" />
+      <workItem from="1585367262680" duration="1507000" />
+      <workItem from="1585373843936" duration="360000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="361" y="71" key="#Project_Structure" timestamp="1585269409640">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="71" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1585269409640" />
+    <state x="548" y="271" width="439" height="291" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1585367738698">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="548" y="271" width="439" height="291" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824@0.0.1536.824" timestamp="1585367738698" />
+    <state x="523" y="273" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1585268119475">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="523" y="273" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1536.824@0.0.1536.824" timestamp="1585268119475" />
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1585374197013">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="523" y="175" key="FileChooserDialogImpl/0.0.1462.864@0.0.1462.864" timestamp="1585047369112" />
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1585374197013" />
+    <state width="1493" height="197" key="GridCell.Tab.0.bottom" timestamp="1585368773916">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1419" height="210" key="GridCell.Tab.0.bottom/0.0.1462.864@0.0.1462.864" timestamp="1585047377268" />
+    <state width="1493" height="197" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1585368773916" />
+    <state width="1342" height="195" key="GridCell.Tab.0.bottom/0.40.1536.824@0.40.1536.824" timestamp="1585122702074" />
+    <state width="1493" height="197" key="GridCell.Tab.0.center" timestamp="1585368773916">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1419" height="210" key="GridCell.Tab.0.center/0.0.1462.864@0.0.1462.864" timestamp="1585047377268" />
+    <state width="1493" height="197" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1585368773916" />
+    <state width="1342" height="195" key="GridCell.Tab.0.center/0.40.1536.824@0.40.1536.824" timestamp="1585122702074" />
+    <state width="1493" height="197" key="GridCell.Tab.0.left" timestamp="1585368773916">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1419" height="210" key="GridCell.Tab.0.left/0.0.1462.864@0.0.1462.864" timestamp="1585047377268" />
+    <state width="1493" height="197" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1585368773916" />
+    <state width="1342" height="195" key="GridCell.Tab.0.left/0.40.1536.824@0.40.1536.824" timestamp="1585122702074" />
+    <state width="1493" height="197" key="GridCell.Tab.0.right" timestamp="1585368773916">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1419" height="210" key="GridCell.Tab.0.right/0.0.1462.864@0.0.1462.864" timestamp="1585047377268" />
+    <state width="1493" height="197" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1585368773916" />
+    <state width="1342" height="195" key="GridCell.Tab.0.right/0.40.1536.824@0.40.1536.824" timestamp="1585122702074" />
+    <state x="232" y="54" key="SettingsEditor" timestamp="1585270192693">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="232" y="54" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1585270192693" />
+    <state x="232" y="94" key="SettingsEditor/0.40.1536.824@0.40.1536.824" timestamp="1585097098729" />
+    <state x="410" y="276" key="com.intellij.ide.util.TipDialog" timestamp="1585374016539">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="410" y="276" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1585374016539" />
+    <state x="373" y="27" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1585367493275">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="373" y="27" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1585367493275" />
+    <state x="373" y="67" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.40.1536.824@0.40.1536.824" timestamp="1585099655396" />
+    <state x="499" y="166" width="538" height="500" key="extract.method.dialog" timestamp="1585267865466">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="166" width="538" height="500" key="extract.method.dialog/0.0.1536.824@0.0.1536.824" timestamp="1585267865466" />
+    <state x="470" y="39" key="refactoring.ChangeSignatureDialog" timestamp="1585362475645">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="470" y="39" key="refactoring.ChangeSignatureDialog/0.0.1536.824@0.0.1536.824" timestamp="1585362475645" />
+  </component>
+</project>
