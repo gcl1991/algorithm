@@ -1,4 +1,6 @@
-# include G1_4.1.txt
-code 1
-code 2
-code 3
+# include file1.txt
+# include file2.txt
+# include file3.txt
+
+my name is root
+my level is 0

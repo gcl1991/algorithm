@@ -13,7 +13,6 @@ class TxtFile{
     }
 
     public static String[] readLines(Path txtFile) throws IOException {
-        printInfo();
         ArrayList<String> text = new ArrayList<>();
         Scanner inputFileRead = new Scanner(txtFile,"UTF-8");
         while (inputFileRead.hasNext()){
