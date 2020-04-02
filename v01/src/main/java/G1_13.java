@@ -1,15 +1,14 @@
-// import lombok.Data;
+import java.util.function.IntFunction;
 
 public class G1_13 {
-//    @Data
     public static class Collection<T>{
-        private Object[] array;
+        protected T[] array;
         public final int length;
-        private int size;
+        protected int size;
 
-        public Collection (int arraySize){
+        public Collection (int arraySize, IntFunction<T[]> constr){
             this.size = 0;
-            this.array = new Object[arraySize];
+            this.array = constr.apply(arraySize);
             this.length = arraySize;
         }
         public boolean isEmpty (){
@@ -18,7 +17,6 @@ public class G1_13 {
 
         public void makEmpty (){
             size = 0;
-            array = new Object[array.length];
         }
 
         public void insert (int index,T value) throws ArrayIndexOutOfBoundsException {
@@ -45,7 +43,7 @@ public class G1_13 {
             if(index<0 || index>=size)
                 throw new ArrayIndexOutOfBoundsException();
             else{
-                T element = (T) array[index];
+                T element =  array[index];
                 for (int i = index; i<size; i++){
                     array[i] = array[i+1];
                 }
