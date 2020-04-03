@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 public class G1_13Test {
     public G1_13.Collection<String> collection;
     public G1_13Test(){
-        collection = new G1_13.Collection<>(10);
+        collection = new G1_13.Collection<>(10,String[]::new);
         collection.insert(0,"1");
         collection.insert(1,"2");
     }
