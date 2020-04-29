@@ -1,3 +1,5 @@
+package Extended;
+
 import java.util.Arrays;
 
 public class KMP {
