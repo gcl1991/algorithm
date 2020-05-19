@@ -1,3 +1,5 @@
+package content;
+
 import content.MyArrayList;
 import org.junit.Test;
 

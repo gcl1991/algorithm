@@ -1,3 +1,5 @@
+package content;
+
 import content.MyArrays;
 import org.junit.Test;
 

@@ -1,3 +1,5 @@
+package Exercises;
+
 import Exercises.E3_1;
 import org.junit.Test;
 

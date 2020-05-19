@@ -4,5 +4,11 @@
 
 时间复杂度$N*O(max(Collections.min(),Collections.replaceAll())$
 
-## 3.2 交换相邻元素
+## 3.3~3.5已经在程序中实现
+
+## 3.6 josephus问题
+
+a 使用双链表迭代器，在迭代器上进行remove较为高效
+
+b 
 
