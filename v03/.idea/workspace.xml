@@ -20,35 +20,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6ea26175-3f22-4ea5-ab5b-0342b38dda58" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_unknown.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Exercises/E3_3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Exercises/E3_4.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Exercises/E3_5.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Exercises/E3_6.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/content/CircularSinglyLinkedList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Exercises/E3_6Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/content/CircularSinglyLinkedListTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Exercises/E3_14.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Exercises/E3_14Test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../v01/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../v01/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/v03.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/v03.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Exercises/E3_11.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Exercises/E3_11.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Exercises/E3_12.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Exercises/E3_12.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Exercises/E3_13.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Exercises/E3_13.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/content/DoublyLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/content/DoublyLinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/content/MyArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/content/MyArrayList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/AlgorithmAnalysisProofQuestions.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/AlgorithmAnalysisProofQuestions.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/E3_1Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Exercises/E3_1Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/LearnIteratorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/content/LearnIteratorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/MyArrayListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/content/MyArrayListTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/MyArraysTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/content/MyArraysTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/content/MyLinkedList$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/content/MyLinkedList$Node.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/content/MyLinkedList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/E3_1Test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/LearnIteratorTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/MyArrayListTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/MyArraysTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Exercises/E3_11Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Exercises/E3_11Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Exercises/E3_13Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Exercises/E3_13Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/AlgorithmAnalysisProofQuestions.md" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/AlgorithmAnalysisProofQuestions.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/content/DoublyLinkedList$LinkedListIterator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/content/DoublyLinkedList$Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/content/DoublyLinkedList$Node.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/content/DoublyLinkedList.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/content/DoublyLinkedList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/content/MyArrayList$ArrayListIterator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/content/MyArrayList$ArrayListIterator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/content/MyArrayList.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/content/MyArrayList.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageOptionsProvider">
+    <option name="myAddOrReplace" value="1" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -73,7 +72,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../frame/spring-in-action-5-samples-master/ch05/tacos/pom.xml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -85,72 +84,8 @@
       <recent name="Exercises" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.E3_6Test.josephusTest">
-    <configuration name="CircularSinglyLinkedListTest.addMiddleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="v03" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="content.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="content" />
-      <option name="MAIN_CLASS_NAME" value="content.CircularSinglyLinkedListTest" />
-      <option name="METHOD_NAME" value="addMiddleTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CircularSinglyLinkedListTest.iteratorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="v03" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="content.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="content" />
-      <option name="MAIN_CLASS_NAME" value="content.CircularSinglyLinkedListTest" />
-      <option name="METHOD_NAME" value="iteratorTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CircularSinglyLinkedListTest.removeOutIndexTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="v03" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="content.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="content" />
-      <option name="MAIN_CLASS_NAME" value="content.CircularSinglyLinkedListTest" />
-      <option name="METHOD_NAME" value="removeOutIndexTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CircularSinglyLinkedListTest.removeTailOutIndexTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="v03" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="content.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="content" />
-      <option name="MAIN_CLASS_NAME" value="content.CircularSinglyLinkedListTest" />
-      <option name="METHOD_NAME" value="removeTailOutIndexTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="E3_6Test.josephusTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.E3_14Test">
+    <configuration name="E3_13Test.testPrevious" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="v03" />
       <extension name="coverage">
         <pattern>
@@ -159,8 +94,71 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Exercises" />
-      <option name="MAIN_CLASS_NAME" value="Exercises.E3_6Test" />
-      <option name="METHOD_NAME" value="josephusTest" />
+      <option name="MAIN_CLASS_NAME" value="Exercises.E3_13Test" />
+      <option name="METHOD_NAME" value="testPrevious" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="E3_14Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="v03" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Exercises.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Exercises" />
+      <option name="MAIN_CLASS_NAME" value="Exercises.E3_14Test" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="E3_14Test.testHasNext" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="v03" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Exercises.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Exercises" />
+      <option name="MAIN_CLASS_NAME" value="Exercises.E3_14Test" />
+      <option name="METHOD_NAME" value="testHasNext" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="E3_14Test.testHasPrevious" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="v03" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Exercises.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Exercises" />
+      <option name="MAIN_CLASS_NAME" value="Exercises.E3_14Test" />
+      <option name="METHOD_NAME" value="testHasPrevious" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="E3_14Test.testNext" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="v03" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Exercises.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Exercises" />
+      <option name="MAIN_CLASS_NAME" value="Exercises.E3_14Test" />
+      <option name="METHOD_NAME" value="testNext" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -168,11 +166,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.E3_6Test.josephusTest" />
-        <item itemvalue="JUnit.CircularSinglyLinkedListTest.iteratorTest" />
-        <item itemvalue="JUnit.CircularSinglyLinkedListTest.removeTailOutIndexTest" />
-        <item itemvalue="JUnit.CircularSinglyLinkedListTest.removeOutIndexTest" />
-        <item itemvalue="JUnit.CircularSinglyLinkedListTest.addMiddleTest" />
+        <item itemvalue="JUnit.E3_14Test" />
+        <item itemvalue="JUnit.E3_14Test.testHasNext" />
+        <item itemvalue="JUnit.E3_14Test.testNext" />
+        <item itemvalue="JUnit.E3_14Test.testHasPrevious" />
+        <item itemvalue="JUnit.E3_13Test.testPrevious" />
       </list>
     </recent_temporary>
   </component>
@@ -208,6 +206,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser" timestamp="1590187635397">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1590187635397" />
     <state x="389" y="90" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1585442336651">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -216,50 +218,50 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="544" y="279" width="448" height="272" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824@0.0.1536.824" timestamp="1589847694008" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1589846716498">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1590061336198">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1589846716498" />
-    <state width="1493" height="273" key="GridCell.Tab.0.bottom" timestamp="1589858075329">
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1590061336198" />
+    <state width="1493" height="171" key="GridCell.Tab.0.bottom" timestamp="1590198492106">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="273" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1589858075329" />
-    <state width="1493" height="273" key="GridCell.Tab.0.center" timestamp="1589858075329">
+    <state width="1493" height="171" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590198492106" />
+    <state width="1493" height="171" key="GridCell.Tab.0.center" timestamp="1590198492106">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="273" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1589858075329" />
-    <state width="1493" height="273" key="GridCell.Tab.0.left" timestamp="1589858075329">
+    <state width="1493" height="171" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1590198492106" />
+    <state width="1493" height="171" key="GridCell.Tab.0.left" timestamp="1590198492106">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="273" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1589858075329" />
-    <state width="1493" height="273" key="GridCell.Tab.0.right" timestamp="1589858075329">
+    <state width="1493" height="171" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1590198492106" />
+    <state width="1493" height="171" key="GridCell.Tab.0.right" timestamp="1590198492106">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="273" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1589858075329" />
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1589852840292">
+    <state width="1493" height="171" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1590198492106" />
+    <state width="1493" height="398" key="GridCell.Tab.1.bottom" timestamp="1590111263577">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1589852840292" />
-    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1589852840292">
+    <state width="1493" height="398" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590111263577" />
+    <state width="1493" height="398" key="GridCell.Tab.1.center" timestamp="1590111263577">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1589852840292" />
-    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1589852840292">
+    <state width="1493" height="398" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1590111263577" />
+    <state width="1493" height="398" key="GridCell.Tab.1.left" timestamp="1590111263577">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1589852840292" />
-    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1589852840292">
+    <state width="1493" height="398" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1590111263577" />
+    <state width="1493" height="398" key="GridCell.Tab.1.right" timestamp="1590111263577">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1589852840292" />
+    <state width="1493" height="398" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1590111263577" />
     <state x="249" y="0" key="SettingsEditor" timestamp="1588897739184">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1588897739184" />
-    <state x="505" y="46" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1589853150126">
+    <state x="505" y="46" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1590194807651">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="505" y="46" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1589853150126" />
+    <state x="505" y="46" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1590194807651" />
     <state x="468" y="146" width="796" height="584" key="find.popup" timestamp="1589857662772">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -272,20 +274,30 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1589848432545" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1589854978388">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1590100884576">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1589854978388" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1590100884576" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/Exercises/E3_6Test.java</url>
-          <line>7</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo typeName="java.lang.Integer" fieldName="value" />
+      </pinned-members>
+    </pin-to-top-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/v03$E3_14Test_testHasPrevious.ic" NAME="E3_14Test.testHasPrevious Coverage Results" MODIFIED="1590196528638" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Exercises.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/v03$E3_13Test_testHasPreviousEmpty.ic" NAME="E3_13Test.testHasPreviousEmpty Coverage Results" MODIFIED="1590108643807" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Exercises.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/v03$E3_11Test.ic" NAME="E3_11Test Coverage Results" MODIFIED="1590105624705" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Exercises.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/v03$E3_13Test_testPrevious.ic" NAME="E3_13Test.testPrevious Coverage Results" MODIFIED="1590110419755" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Exercises.*</FILTER>
+    </SUITE>
   </component>
 </project>

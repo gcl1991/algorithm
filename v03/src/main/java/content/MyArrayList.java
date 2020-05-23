@@ -1,6 +1,7 @@
 package content;
 
 import java.util.Iterator;
+import java.util.ListIterator;
 import java.util.NoSuchElementException;
 
 /**
@@ -13,7 +14,9 @@ public class MyArrayList<T> implements Iterable<T> {
     private int theSize;
     private T[] theItems;
 
-    /** 初始化操作*/
+    /**
+     * 初始化操作
+     */
     public MyArrayList() {
         doClear();
     }
@@ -35,7 +38,9 @@ public class MyArrayList<T> implements Iterable<T> {
         System.arraycopy(src, srcPos, dest, destPos, length);
     }
 
-    /** 增 */
+    /**
+     * 增
+     */
     public boolean add(T x) {
         add(size(), x);
         return true;
@@ -52,7 +57,9 @@ public class MyArrayList<T> implements Iterable<T> {
         return true;
     }
 
-    /**删*/
+    /**
+     * 删
+     */
     public void clear() {
         doClear();
     }
@@ -64,7 +71,9 @@ public class MyArrayList<T> implements Iterable<T> {
         return removeItem;
     }
 
-    /**改*/
+    /**
+     * 改
+     */
     public void trimToSize() {
         ensureCapacity(size());
     }
@@ -82,7 +91,9 @@ public class MyArrayList<T> implements Iterable<T> {
         }
     }
 
-    /**查*/
+    /**
+     * 查
+     */
     public int size() {
         return theSize;
     }
@@ -96,7 +107,9 @@ public class MyArrayList<T> implements Iterable<T> {
         return theItems[index];
     }
 
-    /** 迭代器实现 */
+    /**
+     * 迭代器实现
+     */
     public Iterator<T> iterator() {
         return new ArrayListIterator();
     }
@@ -119,5 +132,69 @@ public class MyArrayList<T> implements Iterable<T> {
         public void remove() {
             MyArrayList.this.remove(--index);
         }
+    }
+
+    public ListIterator<T> listIterator() {
+        return new InnerListIterator();
+    }
+
+    private class InnerListIterator implements ListIterator<T> {
+        private int index = 0;
+
+        @Override
+        public boolean hasPrevious() {
+            return index > 0 && index < size();
+        }
+
+        @Override
+        public T previous() {
+            if (hasPrevious())
+                return theItems[--index];
+            else
+                throw new NoSuchElementException();
+        }
+
+        @Override
+        public void add(T x) {
+            MyArrayList.this.add(index, x);
+            index++;
+        }
+
+        @Override
+        public void set(T t) {
+            if (hasPrevious())
+                theItems[index - 1] = t;
+            else
+                throw new ArrayIndexOutOfBoundsException();
+        }
+
+
+        @Override
+        public boolean hasNext() {
+            return index < size();
+        }
+
+        @Override
+        public T next() {
+            if (hasNext())
+                return theItems[index++];
+            throw new NoSuchElementException();
+        }
+
+        @Override
+        public int nextIndex() {
+            throw new UnsupportedOperationException();
+        }
+
+        @Override
+        public int previousIndex() {
+            throw new UnsupportedOperationException();
+        }
+
+        @Override
+        public void remove() {
+            throw new UnsupportedOperationException();
+        }
+
     }
 }
