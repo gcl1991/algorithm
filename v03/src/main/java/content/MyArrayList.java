@@ -1,5 +1,6 @@
 package content;
 
+import java.util.ConcurrentModificationException;
 import java.util.Iterator;
 import java.util.ListIterator;
 import java.util.NoSuchElementException;
@@ -11,6 +12,7 @@ import java.util.NoSuchElementException;
  */
 public class MyArrayList<T> implements Iterable<T> {
     private static final int DEFAULT_CAPACITY = 10; // 所有对象共享
+    private int modCount;
     private int theSize;
     private T[] theItems;
 
@@ -24,14 +26,16 @@ public class MyArrayList<T> implements Iterable<T> {
     private void doClear() {
         theSize = 0;
         theItems = (T[]) new Object[DEFAULT_CAPACITY];
+        modCount++;
     }
 
     private void ensureCapacity(int newCapacity) {
         if (newCapacity < size())
             return;
-        T[] newTheItems = (T[]) new Object[newCapacity];// 为什么不出错，猜测因为object内全为null
+        T[] newTheItems = (T[]) new Object[newCapacity];// 为什么不出错，因为object内全为null,全Null矩阵可以转换成任意类型
         arrayCopy(theItems, 0, newTheItems, 0, size());
         theItems = newTheItems;
+        modCount++;
     }
 
     private void arrayCopy(T[] src, int srcPos, T[] dest, int destPos, int length) {
@@ -54,6 +58,7 @@ public class MyArrayList<T> implements Iterable<T> {
         arrayCopy(theItems, index, theItems, index + 1, oldSize - index);
         theItems[index] = x;
         theSize++;
+        modCount++;
         return true;
     }
 
@@ -68,6 +73,7 @@ public class MyArrayList<T> implements Iterable<T> {
         T removeItem = theItems[index];
         arrayCopy(theItems, index + 1, theItems, index, size() - index - 1);
         theSize--;
+        modCount++;
         return removeItem;
     }
 
@@ -117,20 +123,27 @@ public class MyArrayList<T> implements Iterable<T> {
     // 主要注意index的移动问题
     private class ArrayListIterator implements Iterator<T> {
         private int index = 0;
+        private int expectedModCount = modCount;
+        private boolean okToRemove = false;
 
         public boolean hasNext() {
             return index < size();
         }
 
         public T next() {
-            if (hasNext())
-                return theItems[index++];
-            else
-                throw new NoSuchElementException();
+            if(expectedModCount!=modCount) throw new ConcurrentModificationException();
+            if (!hasNext()) throw new NoSuchElementException();
+
+            T data = theItems[index++];
+            okToRemove = true;
+            return data;
         }
 
         public void remove() {
+            if(expectedModCount!=modCount) throw new ConcurrentModificationException();
+            if (!okToRemove) throw new IllegalStateException();
             MyArrayList.this.remove(--index);
+            okToRemove = false;
         }
     }
 

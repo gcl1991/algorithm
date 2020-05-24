@@ -1,5 +1,7 @@
 package content;
 
+import Exercises.E3_2;
+
 import javax.swing.text.html.HTMLDocument;
 import java.util.*;
 
@@ -68,14 +70,14 @@ public class DoublyLinkedList<T> implements Iterable<T> {
         if (idx < lower || idx > upper) {
             throw new ArrayIndexOutOfBoundsException();
         }
-        if (idx <= size() / 2) { // 包含size()为0的情况
+        if (idx < size() / 2) {
             p = beginMarker.next;
             for (int i = 0; i < idx; i++) {
                 p = p.next;
             }
-        } else {
-            p = endMarker.prev;
-            for (int i = size() - 1; i > idx; i--) {
+        } else {// 包含size()为0时候的数据插入的边界情况
+            p = endMarker;
+            for (int i = size(); i > idx; i--) {
                 p = p.prev;
             }
         }
@@ -92,6 +94,23 @@ public class DoublyLinkedList<T> implements Iterable<T> {
         for (T x : items) {
             addBefore(endMarker, x);
         }
+    }
+
+    // 3.15 基于类的访问权限
+    public void splice(DoublyLinkedList<T> lst) {
+        // 拼接
+        Node<T> firstNode = beginMarker.next;
+        beginMarker.next = lst.beginMarker.next;
+        lst.beginMarker.next.prev = beginMarker;
+        lst.endMarker.prev.next = firstNode;
+        firstNode.prev = lst.endMarker.prev;
+        theSize+=lst.size();
+        modCount++;
+        // 删除
+        lst.beginMarker.next = lst.endMarker;
+        lst.endMarker.prev = lst.beginMarker;
+        lst.theSize=0;
+        lst.modCount++;
     }
 
 
@@ -202,10 +221,31 @@ public class DoublyLinkedList<T> implements Iterable<T> {
         }
     }
 
+    public Iterator<T> reverseIterator(){
+        return new ReverseIterator();
+    }
+    // 3.16
+    public class ReverseIterator implements Iterator<T>{
+        private Node<T> current = endMarker.prev;
+
+        @Override
+        public boolean hasNext() {
+            return current!=beginMarker;
+        }
+
+        @Override
+        public T next() {
+            if (!hasNext()) throw new NoSuchElementException();
+            T data = current.data;
+            current = current.prev;
+            return data;
+        }
+    }
+
     public ListIterator<T> listIterator() {
         return new InnerListIterator();
     }
-
+    // 主要是通过引入布尔状态变量，负责在上移下移之间传递同步信号
     private class InnerListIterator implements ListIterator<T> {
         private Node<T> current = beginMarker;
         private int expectedModCount = modCount;
@@ -215,7 +255,7 @@ public class DoublyLinkedList<T> implements Iterable<T> {
 
         @Override
         public boolean hasNext() {
-            return current != endMarker;
+            return current != endMarker && size()!=0;
         }
 
         @Override
