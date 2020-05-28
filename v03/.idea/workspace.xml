@@ -20,24 +20,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6ea26175-3f22-4ea5-ab5b-0342b38dda58" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Exercises/E3_15.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Exercises/E3_16.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Exercises/E3_17.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Exercises/E3_15Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Exercises/E3_16Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Exercises/E3_17Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Exercises/E3_18.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Exercises/E3_19.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Exercises/E3_20.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Exercises/E3_21.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Exercises/E3_22.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Exercises/E3_23.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Exercises/E3_18Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Exercises/E3_19Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Exercises/E3_20Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Exercises/E3_21Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Exercises/E3_22Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Exercises/E3_23Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/test.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../v01/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../v01/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../v02.md" beforeDir="false" afterPath="$PROJECT_DIR$/../v02.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../v03.md" beforeDir="false" afterPath="$PROJECT_DIR$/../v03.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/v03.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/v03.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/content/DoublyLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/content/DoublyLinkedList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/content/MyArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/content/MyArrayList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/AlgorithmAnalysisProofQuestions.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/AlgorithmAnalysisProofQuestions.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/AlgorithmAnalysisProofQuestions.md" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/AlgorithmAnalysisProofQuestions.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/AlgorithmAnalysisProofQuestions.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/v03.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/content/DoublyLinkedList$InnerIterator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/content/DoublyLinkedList$InnerIterator.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/content/DoublyLinkedList$InnerListIterator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/content/DoublyLinkedList$InnerListIterator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/content/DoublyLinkedList$Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/content/DoublyLinkedList$Node.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/content/DoublyLinkedList$ReverseIterator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/content/DoublyLinkedList$ReverseIterator.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/content/DoublyLinkedList.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/content/DoublyLinkedList.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Exercises/E3_14Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Exercises/E3_14Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/v03.kotlin_module" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +80,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../language/java/corejava_mooc/MOOC06-05/note.md" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -81,9 +91,12 @@
       <recent name="content" />
       <recent name="Exercises" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\learn\algorithm\data_structure_and_algorithm_analysis_java3th\v03\src\test\resources" />
+    </key>
   </component>
-  <component name="RunManager" selected="JUnit.E3_17Test.testModException">
-    <configuration name="E3_14Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.E3_23Test.testExpressionSuffix2Infix">
+    <configuration name="E3_21Test.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="v03" />
       <extension name="coverage">
         <pattern>
@@ -92,13 +105,45 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Exercises" />
-      <option name="MAIN_CLASS_NAME" value="Exercises.E3_14Test" />
+      <option name="MAIN_CLASS_NAME" value="Exercises.E3_21Test" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="E3_22Test.testComputeSuffixExpression" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="v03" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Exercises.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Exercises" />
+      <option name="MAIN_CLASS_NAME" value="Exercises.E3_22Test" />
+      <option name="METHOD_NAME" value="testComputeSuffixExpression" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="E3_23Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="v03" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Exercises.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Exercises" />
+      <option name="MAIN_CLASS_NAME" value="Exercises.E3_23Test" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="E3_14Test.testHasNext" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="E3_23Test.testExpressionInfix2Suffix" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="v03" />
       <extension name="coverage">
         <pattern>
@@ -107,14 +152,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Exercises" />
-      <option name="MAIN_CLASS_NAME" value="Exercises.E3_14Test" />
-      <option name="METHOD_NAME" value="testHasNext" />
+      <option name="MAIN_CLASS_NAME" value="Exercises.E3_23Test" />
+      <option name="METHOD_NAME" value="testExpressionInfix2Suffix" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="E3_15Test.testSplice" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="E3_23Test.testExpressionSuffix2Infix" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="v03" />
       <extension name="coverage">
         <pattern>
@@ -123,40 +168,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Exercises" />
-      <option name="MAIN_CLASS_NAME" value="Exercises.E3_15Test" />
-      <option name="METHOD_NAME" value="testSplice" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="E3_16Test.testReverseIterator" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="v03" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Exercises.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Exercises" />
-      <option name="MAIN_CLASS_NAME" value="Exercises.E3_16Test" />
-      <option name="METHOD_NAME" value="testReverseIterator" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="E3_17Test.testModException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="v03" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Exercises.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Exercises" />
-      <option name="MAIN_CLASS_NAME" value="Exercises.E3_17Test" />
-      <option name="METHOD_NAME" value="testModException" />
+      <option name="MAIN_CLASS_NAME" value="Exercises.E3_23Test" />
+      <option name="METHOD_NAME" value="testExpressionSuffix2Infix" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -164,11 +177,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.E3_17Test.testModException" />
-        <item itemvalue="JUnit.E3_16Test.testReverseIterator" />
-        <item itemvalue="JUnit.E3_14Test" />
-        <item itemvalue="JUnit.E3_15Test.testSplice" />
-        <item itemvalue="JUnit.E3_14Test.testHasNext" />
+        <item itemvalue="JUnit.E3_23Test.testExpressionSuffix2Infix" />
+        <item itemvalue="JUnit.E3_23Test" />
+        <item itemvalue="JUnit.E3_23Test.testExpressionInfix2Suffix" />
+        <item itemvalue="JUnit.E3_22Test.testComputeSuffixExpression" />
+        <item itemvalue="JUnit.E3_21Test.test" />
       </list>
     </recent_temporary>
   </component>
@@ -204,6 +217,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="249" y="0" key="#Project_Structure" timestamp="1590456406766">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="249" y="0" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1590456406766" />
     <state x="574" y="118" key="#com.intellij.ide.util.MemberChooser" timestamp="1590281020022">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -216,50 +233,50 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="544" y="279" width="448" height="272" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.824@0.0.1536.824" timestamp="1589847694008" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1590214278495">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1590622150708">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1590214278495" />
-    <state width="1493" height="171" key="GridCell.Tab.0.bottom" timestamp="1590281597328">
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1590622150708" />
+    <state width="1493" height="255" key="GridCell.Tab.0.bottom" timestamp="1590636813817">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="171" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590281597328" />
-    <state width="1493" height="171" key="GridCell.Tab.0.center" timestamp="1590281597328">
+    <state width="1493" height="255" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590636813817" />
+    <state width="1493" height="255" key="GridCell.Tab.0.center" timestamp="1590636813817">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="171" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1590281597328" />
-    <state width="1493" height="171" key="GridCell.Tab.0.left" timestamp="1590281597328">
+    <state width="1493" height="255" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1590636813817" />
+    <state width="1493" height="255" key="GridCell.Tab.0.left" timestamp="1590636813816">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="171" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1590281597328" />
-    <state width="1493" height="171" key="GridCell.Tab.0.right" timestamp="1590281597328">
+    <state width="1493" height="255" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1590636813816" />
+    <state width="1493" height="255" key="GridCell.Tab.0.right" timestamp="1590636813817">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="171" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1590281597328" />
-    <state width="1493" height="398" key="GridCell.Tab.1.bottom" timestamp="1590279095041">
+    <state width="1493" height="255" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1590636813817" />
+    <state width="1493" height="398" key="GridCell.Tab.1.bottom" timestamp="1590284111816">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="398" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590279095041" />
-    <state width="1493" height="398" key="GridCell.Tab.1.center" timestamp="1590279095041">
+    <state width="1493" height="398" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590284111816" />
+    <state width="1493" height="398" key="GridCell.Tab.1.center" timestamp="1590284111816">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="398" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1590279095041" />
-    <state width="1493" height="398" key="GridCell.Tab.1.left" timestamp="1590279095041">
+    <state width="1493" height="398" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1590284111816" />
+    <state width="1493" height="398" key="GridCell.Tab.1.left" timestamp="1590284111816">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="398" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1590279095041" />
-    <state width="1493" height="398" key="GridCell.Tab.1.right" timestamp="1590279095041">
+    <state width="1493" height="398" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1590284111816" />
+    <state width="1493" height="398" key="GridCell.Tab.1.right" timestamp="1590284111816">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="398" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1590279095041" />
+    <state width="1493" height="398" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1590284111816" />
     <state x="249" y="0" key="SettingsEditor" timestamp="1588897739184">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1588897739184" />
-    <state x="505" y="46" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1590276812567">
+    <state x="505" y="46" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1590636903061">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="505" y="46" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1590276812567" />
+    <state x="505" y="46" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1590636903061" />
     <state x="468" y="146" width="796" height="584" key="find.popup" timestamp="1589857662772">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

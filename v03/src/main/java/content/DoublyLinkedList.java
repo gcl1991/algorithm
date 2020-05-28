@@ -112,6 +112,15 @@ public class DoublyLinkedList<T> implements Iterable<T> {
         lst.theSize=0;
         lst.modCount++;
     }
+    // 3.18
+    public void addFirst(T x){
+        Node<T> fistNode = getNode(0);
+        addBefore(fistNode,x);
+    }
+
+    public void addLast(T newItem){
+        addBefore(getNode(size()), newItem);
+    }
 
 
     /**
@@ -150,6 +159,18 @@ public class DoublyLinkedList<T> implements Iterable<T> {
         }
     }
 
+    // 3.18
+    public T removeFirst(){
+        Node<T> firstNode = getNode(0);
+        return remove(firstNode);
+    }
+
+    public T removeLast(){
+        Node<T> lastNode = getNode(size()-1);
+        return remove(lastNode);
+    }
+
+
     /**
      * 改
      */
@@ -180,6 +201,18 @@ public class DoublyLinkedList<T> implements Iterable<T> {
         }
         return isContains;
     }
+
+    // 3.18
+    public T getFirst(){
+        Node<T> firstNode = getNode(0);
+        return firstNode.data;
+    }
+
+    public T getLast(){
+        Node<T> lastNode = getNode(size()-1);
+        return lastNode.data;
+    }
+
 
     /**
      * 迭代器
