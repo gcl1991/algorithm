@@ -20,34 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6ea26175-3f22-4ea5-ab5b-0342b38dda58" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Exercises/E3_18.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Exercises/E3_19.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Exercises/E3_20.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Exercises/E3_21.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Exercises/E3_22.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Exercises/E3_23.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Exercises/E3_18Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Exercises/E3_19Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Exercises/E3_20Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Exercises/E3_21Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Exercises/E3_22Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/Exercises/E3_23Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/test.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Exercises/E3_24toE3_27.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Exercises/E3_28.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/content/Deque.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Exercises/E3_24toE3_27Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/Exercises/E3_28Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/content/DequeTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../v01/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../v01/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../v02.md" beforeDir="false" afterPath="$PROJECT_DIR$/../v02.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../v03.md" beforeDir="false" afterPath="$PROJECT_DIR$/../v03.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/v03.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/v03.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/content/DoublyLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/content/DoublyLinkedList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/AlgorithmAnalysisProofQuestions.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/v03.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/content/DoublyLinkedList$InnerIterator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/content/DoublyLinkedList$InnerIterator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/content/DoublyLinkedList$InnerListIterator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/content/DoublyLinkedList$InnerListIterator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/content/DoublyLinkedList$ReverseIterator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/content/DoublyLinkedList$ReverseIterator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/content/DoublyLinkedList.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/content/DoublyLinkedList.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/META-INF/v03.kotlin_module" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +51,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1Z6KqoQFJB6wRd4vIhSF61PryPJ" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -95,65 +80,65 @@
       <recent name="D:\learn\algorithm\data_structure_and_algorithm_analysis_java3th\v03\src\test\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.E3_23Test.testExpressionSuffix2Infix">
-    <configuration name="E3_21Test.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.DequeTest">
+    <configuration name="DequeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="v03" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Exercises.*" />
+          <option name="PATTERN" value="content.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Exercises" />
-      <option name="MAIN_CLASS_NAME" value="Exercises.E3_21Test" />
-      <option name="METHOD_NAME" value="test" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="E3_22Test.testComputeSuffixExpression" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="v03" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Exercises.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Exercises" />
-      <option name="MAIN_CLASS_NAME" value="Exercises.E3_22Test" />
-      <option name="METHOD_NAME" value="testComputeSuffixExpression" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="E3_23Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="v03" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Exercises.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Exercises" />
-      <option name="MAIN_CLASS_NAME" value="Exercises.E3_23Test" />
+      <option name="PACKAGE_NAME" value="content" />
+      <option name="MAIN_CLASS_NAME" value="content.DequeTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="E3_23Test.testExpressionInfix2Suffix" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="DequeTest.testConstructor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="v03" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Exercises.*" />
+          <option name="PATTERN" value="content.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="Exercises" />
-      <option name="MAIN_CLASS_NAME" value="Exercises.E3_23Test" />
-      <option name="METHOD_NAME" value="testExpressionInfix2Suffix" />
+      <option name="PACKAGE_NAME" value="content" />
+      <option name="MAIN_CLASS_NAME" value="content.DequeTest" />
+      <option name="METHOD_NAME" value="testConstructor" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DequeTest.testEject" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="v03" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="content.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="content" />
+      <option name="MAIN_CLASS_NAME" value="content.DequeTest" />
+      <option name="METHOD_NAME" value="testEject" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DequeTest.testPush" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="v03" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="content.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="content" />
+      <option name="MAIN_CLASS_NAME" value="content.DequeTest" />
+      <option name="METHOD_NAME" value="testPush" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -177,11 +162,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.DequeTest" />
+        <item itemvalue="JUnit.DequeTest.testEject" />
+        <item itemvalue="JUnit.DequeTest.testPush" />
+        <item itemvalue="JUnit.DequeTest.testConstructor" />
         <item itemvalue="JUnit.E3_23Test.testExpressionSuffix2Infix" />
-        <item itemvalue="JUnit.E3_23Test" />
-        <item itemvalue="JUnit.E3_23Test.testExpressionInfix2Suffix" />
-        <item itemvalue="JUnit.E3_22Test.testComputeSuffixExpression" />
-        <item itemvalue="JUnit.E3_21Test.test" />
       </list>
     </recent_temporary>
   </component>
@@ -237,22 +222,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1590622150708" />
-    <state width="1493" height="255" key="GridCell.Tab.0.bottom" timestamp="1590636813817">
+    <state width="1493" height="128" key="GridCell.Tab.0.bottom" timestamp="1590890625460">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="255" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590636813817" />
-    <state width="1493" height="255" key="GridCell.Tab.0.center" timestamp="1590636813817">
+    <state width="1493" height="128" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1590890625460" />
+    <state width="1493" height="128" key="GridCell.Tab.0.center" timestamp="1590890625460">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="255" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1590636813817" />
-    <state width="1493" height="255" key="GridCell.Tab.0.left" timestamp="1590636813816">
+    <state width="1493" height="128" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1590890625460" />
+    <state width="1493" height="128" key="GridCell.Tab.0.left" timestamp="1590890625460">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="255" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1590636813816" />
-    <state width="1493" height="255" key="GridCell.Tab.0.right" timestamp="1590636813817">
+    <state width="1493" height="128" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1590890625460" />
+    <state width="1493" height="128" key="GridCell.Tab.0.right" timestamp="1590890625460">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="255" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1590636813817" />
+    <state width="1493" height="128" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1590890625460" />
     <state width="1493" height="398" key="GridCell.Tab.1.bottom" timestamp="1590284111816">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -273,10 +258,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1588897739184" />
-    <state x="505" y="46" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1590636903061">
+    <state x="505" y="46" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1590889884758">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="505" y="46" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1590636903061" />
+    <state x="505" y="46" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824@0.0.1536.824" timestamp="1590889884758" />
     <state x="468" y="146" width="796" height="584" key="find.popup" timestamp="1589857662772">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -289,10 +274,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1589848432545" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1590100884576">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1590888827519">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1590100884576" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1590888827519" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
