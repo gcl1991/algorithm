@@ -1,2 +1,3 @@
 # Project exclude paths
-/v01/target/
+target
+.idea
