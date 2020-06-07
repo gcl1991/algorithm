@@ -3,7 +3,7 @@ package content;
 import java.io.File;
 
 // dir file dirname filename path
-public class PrintDirectoryTree {
+public class Fig4_6and9PrintDirectoryTree {
     public static void listAll(int depth, String fileString) {
         File file = new File(fileString);
         System.out.println(stringMultiplication("\t", depth) + file.getName());
