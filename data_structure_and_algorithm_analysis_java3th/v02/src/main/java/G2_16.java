@@ -1,51 +1,47 @@
-public class G2_16 {
-    public static int gcd(int a, int b) {
-        abPair pair = swapIfALessB(a, b);
-        a = pair.getA();
-        b = pair.getB();
 
-        if (a % 2 == 0 && b % 2 == 0)
-            return gcdEvenEven(a, b);
-        else if (a % 2 != 0 && b % 2 != 0)
-            return gcdOddOdd(a, b);
-        else if (a % 2 != 0)
-            return gcdOddEven(a, b);
+public final class G2_16 {
+    private final static int COMMON_DIVISOR = 2;
+    public static int gcd(GcdPair pair) {
+        if (pair.isBothEven())
+            return gcdEvenEven(pair);
+        else if (pair.isBothOdd())
+            return gcdOddOdd(pair);
+        else if (pair.isFirstOddSecondEven())
+            return gcdOddEven(pair);
         else
-            return gcdEvenOdd(a, b);
+            return gcdEvenOdd(pair);
     }
 
-    public static int gcdEvenEven(int a, int b) {
-        return 2 * gcdWhile(a / 2, b / 2);
+    public static int gcdEvenEven(GcdPair pair) {
+        GcdPair newPair = new GcdPair(pair.getA()/COMMON_DIVISOR, pair.getB() / COMMON_DIVISOR);
+        return COMMON_DIVISOR * gcdWhile(newPair);
     }
 
-    public static int gcdEvenOdd(int a, int b) {
-        return gcdWhile(a / 2, b);
+    public static int gcdEvenOdd(GcdPair pair) {
+        GcdPair newPair = new GcdPair(pair.getA() / COMMON_DIVISOR, pair.getB());
+        return gcdWhile(newPair);
     }
 
-    public static int gcdOddEven(int a, int b) {
-        return gcdWhile(a, b / 2);
+    public static int gcdOddEven(GcdPair pair) {
+        GcdPair newPair = new GcdPair(pair.getA(), pair.getB() / COMMON_DIVISOR);
+        return gcdWhile(newPair);
     }
 
-    public static int gcdOddOdd(int a, int b) {
-        return gcdWhile((a + b) / 2, (a - b) / 2);
+    public static int gcdOddOdd(GcdPair pair) {
+        GcdPair newPair = new GcdPair((pair.getA() + pair.getB()) / COMMON_DIVISOR, (pair.getA() - pair.getB()) / COMMON_DIVISOR);
+        return gcdWhile(newPair);
     }
 
-    public static int gcdRecursive(int a, int b) {
-        abPair pair = swapIfALessB(a, b);
-        a = pair.getA();
-        b = pair.getB();
-
-        if (a % b == 0)
-            return b;
+    public static int gcdRecursive(GcdPair pair) {
+        if (pair.getA() % pair.getB() == 0)
+            return pair.getB();
         else
-            return gcdRecursive(b, a % b);
+            return gcdRecursive(new GcdPair(pair.getB(), pair.getA() % pair.getB()));
     }
 
-    public static int gcdWhile(int a, int b) {
-        abPair pair = swapIfALessB(a, b);
-        a = pair.getA();
-        b = pair.getB();
-
+    public static int gcdWhile(GcdPair pair) {
+        int a = pair.getA();
+        int b = pair.getB();
         while (b != 0) {
             int temp = a % b;
             a = b;
@@ -54,29 +50,37 @@ public class G2_16 {
         return a;
     }
 
-    public static abPair swapIfALessB(int a, int b) {
-        if (a <= b) {
-            int temp = a;
-            a = b;
-            b = temp;
-        }
-        return new abPair(a, b);
-    }
+    static final class GcdPair {
+        private int a;
+        private int b;
 
-    static class abPair {
-        public int a;
-        public int b;
-
-        public abPair(int a, int b) {
-            this.a = a;
-            this.b = b;
+        GcdPair(int a, int b) {
+            if (a <= b){
+                this.a = b;
+                this.b = a;
+            }else {
+                this.a = a;
+                this.b = b;
+            }
         }
 
-        public int getA() {
+        private boolean isBothEven() {
+            return a % COMMON_DIVISOR == 0 && b % COMMON_DIVISOR == 0;
+        }
+
+        private boolean isBothOdd() {
+            return a % COMMON_DIVISOR != 0 && b % COMMON_DIVISOR != 0;
+        }
+
+        private boolean isFirstOddSecondEven() {
+            return a % COMMON_DIVISOR != 0 && b % COMMON_DIVISOR == 0;
+        }
+
+        private int getA() {
             return a;
         }
 
-        public int getB() {
+        private int getB() {
             return b;
         }
     }
