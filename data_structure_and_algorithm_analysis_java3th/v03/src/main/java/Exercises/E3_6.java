@@ -4,29 +4,16 @@ import content.CircularSinglyLinkedList;
 
 import java.util.Iterator;
 import java.util.LinkedList;
+import java.util.List;
 
 public class E3_6 {
-    public static void josephus(int m, int n) {
+    public static int josephus(int m, int n) {
         LinkedList<Integer> lst = initLst(n);
-        int count=0;
         int index = 0;
         while (lst.size()!=1) {
-            Iterator<Integer> itr = lst.iterator();
-            while (itr.hasNext()) {
-                Integer element = itr.next();
-                index++;
-                count++;
-                if (index == m + 1) {
-                    System.out.println("被移除的元素" + element);
-                    print(lst);
-                    itr.remove();
-                    index = 0;
-                    print(lst);
-                }
-            }
+            index = removeElements(lst,index,m);
         }
-        System.out.println(count);
-        System.out.println(lst.getFirst()+"号获胜");
+        return lst.getFirst();
     }
 
     private static LinkedList<Integer> initLst(int n) {
@@ -37,10 +24,16 @@ public class E3_6 {
         return lst;
     }
 
-    private static void print(LinkedList<Integer> lst) {
-        for (Integer x : lst) {
-            System.out.print(x);
+    public static <T> int removeElements(List<T> lst,int index,int m){
+        Iterator<T> itr = lst.iterator();
+        while (itr.hasNext()) {
+            itr.next();
+            index++;
+            if (index == m + 1) {
+                itr.remove();
+                index = 0;
+            }
         }
-        System.out.println();
+        return index;
     }
 }
