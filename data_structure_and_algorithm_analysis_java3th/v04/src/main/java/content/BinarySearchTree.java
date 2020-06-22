@@ -142,7 +142,6 @@ public class BinarySearchTree<T extends Comparable<? super T>> {
         if (t != null)
             while (t.right != null)
                 t = t.right;
-
         return t;
     }
 
