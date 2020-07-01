@@ -11,7 +11,7 @@ import java.util.function.Consumer;
  * 1 内部节点类，与双链表类似
  * 2 增删查（没有修改，修改相当于先删除再增加，同时Set没有索引，无法修改数据），增删可以使用递归或循环实现(但是即位琐碎臃肿，需要增加父节点引用，
  * 同时左右节点内数据必须不同，否则将出现隐藏的致命bug)，还是应使用递归实现。
- * 3 迭代器实现（先序遍历）：
+ * 3 迭代器实现（中序遍历）：
  * 基于这样一个事实：在先序遍历递归过程中，如果当前节点上一迭代节点为其左子节点，则当前节点未被使用，如果当前节点上一节点为右子节点，则当前节点已被使用。
  * 起点h=0,左->中->右->跳h+1的树(比当前树高度+1的下一棵更大子树)—>最大树(max h)表现为树的增长过程
  * 先中后序遍历表现为树增长过程(h从1到max)
@@ -26,11 +26,11 @@ import java.util.function.Consumer;
  * 同时引入父节点将形成不必要的内存开销，同时导致代码臃肿，容易出错
  * 5 主要是递归和先中后序遍历
  */
-class BinarySearchTreeSet<T extends Comparable<? super T>> implements Iterable<T> {
+class BinarySearchTreeSetParent<T extends Comparable<? super T>> implements Iterable<T> {
     private int size = 0;
     private BinaryNode<T> root = null;
 
-    BinarySearchTreeSet() {
+    BinarySearchTreeSetParent() {
         size = 0;
         root = null;
     }
@@ -84,11 +84,7 @@ class BinarySearchTreeSet<T extends Comparable<? super T>> implements Iterable<T
     boolean remove(T toBeDeleteElement) {
         Optional<BinaryNode<T>> toBeDeleteNode = findNode(toBeDeleteElement, root);
         Optional<Boolean> isOK = toBeDeleteNode.map(x -> {
-            if (x.isLeafNode()) {
-                removeLeafNodeSelf(x);
-            } else {
                 removeNode(x);
-            }
             return true;
         });
         return isOK.orElse(false);
@@ -206,7 +202,7 @@ class BinarySearchTreeSet<T extends Comparable<? super T>> implements Iterable<T
         if (isEmpty()) throw new NoSuchElementException();
         return findMaxNode(root).element;
     }
-
+    // 一直向右走
     private static <T> BinaryNode<T> findMaxNode(@NotNull BinaryNode<T> tree) {
         if (tree.existsRightChild()) {
             return findMaxNode(tree.right);
@@ -222,6 +218,7 @@ class BinarySearchTreeSet<T extends Comparable<? super T>> implements Iterable<T
         return contains(element, root);
     }
 
+    // (1)比较确定方向 (2)向左或右递归
     private static <T extends Comparable<? super T>> boolean contains(@NotNull T element, @NotNull BinaryNode<T> tree) {
         int result = tree.element.compareTo(element);
         if (result == 0) {
@@ -244,6 +241,7 @@ class BinarySearchTreeSet<T extends Comparable<? super T>> implements Iterable<T
         print(root);
     }
 
+    // 无返回值的递归
     private static <T> void print(BinaryNode<T> tree) {
         if (tree.existsLeftChild()) {
             print(tree.left);
@@ -267,7 +265,9 @@ class BinarySearchTreeSet<T extends Comparable<? super T>> implements Iterable<T
 
     private class TreeIterator implements Iterator<T> {
         BinaryNode<T> currentNode;
+        BinaryNode<T> prevNode;
         BinaryNode<T> endNode;
+        private boolean isOkRemove;
         private boolean isHasNext;
         private SubNodeType fromWhichReturn;
 
@@ -276,8 +276,10 @@ class BinarySearchTreeSet<T extends Comparable<? super T>> implements Iterable<T
                 throw new NoSuchElementException();
             }
             currentNode = findMinNode(root);
+            prevNode = null;
             endNode = findMaxNode(root); // 当只有一个元素时，为根节点
             isHasNext = true;
+            isOkRemove = false;
         }
 
         @Override
@@ -292,8 +294,17 @@ class BinarySearchTreeSet<T extends Comparable<? super T>> implements Iterable<T
             if (currentNode == endNode) {
                 isHasNext = false;
             }
+            prevNode = currentNode;
             currentNode = getNextMaxNode(currentNode);
+            isOkRemove = true;
             return data;
+        }
+
+        @Override
+        public void remove() {
+            if (!isOkRemove) throw new IllegalStateException();
+            removeNode(prevNode);
+            isOkRemove = false;
         }
 
         private BinaryNode<T> getNextMaxNode(BinaryNode<T> node) {

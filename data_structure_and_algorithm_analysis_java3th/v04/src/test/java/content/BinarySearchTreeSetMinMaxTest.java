@@ -1,53 +1,54 @@
 package content;
 
 import static org.junit.Assert.*;
-
-import content.BinarySearchTreeSet;
 import org.junit.Test;
 
 import java.util.Iterator;
 
-public class BinarySearchTreeSetTest {
-    private BinarySearchTreeSet<Integer> treeSet = new BinarySearchTreeSet<>();
+public class BinarySearchTreeSetMinMaxTest {
+    BinarySearchTreeSetMinMax<Integer> treeSet = new BinarySearchTreeSetMinMax<>();
     @Test
     public void testConstructor(){
-        assertEquals(treeSet.size(),0);
+        assertTrue(treeSet.isEmpty());
+    }
+
+    @Test
+    public void testAdd(){
+        treeSet.add(1);
+        assertEquals(1,treeSet.size());
     }
 
     @Test
     public void testAddDuplicate(){
-        boolean isOkFirst= treeSet.add(1);
-        boolean isOkSecond = treeSet.add(1);
-        assertTrue(isOkFirst);
-        assertFalse(isOkSecond);
-        assertEquals(treeSet.size(),1);
+        treeSet.add(1);
+        treeSet.add(1);
+        assertEquals(1,treeSet.size());
+    }
+
+    @Test
+    public void testGetMin(){
+        treeSet.add(1);
+        treeSet.add(2);
+        assertEquals(1,(int) treeSet.getMin());
+    }
+
+    @Test
+    public void testGetMax(){
+        treeSet.add(1);
+        treeSet.add(2);
+        assertEquals(2,(int) treeSet.getMax());
     }
 
     @Test
     public void testRemove(){
-        boolean isOk = treeSet.add(1);
-        treeSet.remove(1);
-        assertTrue(isOk);
-        assertEquals(treeSet.size(),0);
-    }
-
-    @Test
-    public void testFindMin(){
-        treeSet.add(2);
         treeSet.add(1);
-        assertEquals(treeSet.findMin(),Integer.valueOf(1));
-    }
-
-    @Test
-    public void testFindMax(){
         treeSet.add(2);
-        treeSet.add(1);
-        assertEquals(treeSet.findMax(),Integer.valueOf(2));
+        treeSet.remove(2);
+        assertFalse(treeSet.contains(2));
     }
 
     @Test
     public void testContains(){
-        assertFalse(treeSet.contains(1));
         treeSet.add(1);
         assertTrue(treeSet.contains(1));
     }
@@ -57,10 +58,10 @@ public class BinarySearchTreeSetTest {
         treeSet.add(2);
         treeSet.add(1);
         treeSet.add(3);
-        int i=0;
-        for(Iterator<Integer> iterator=treeSet.iterator();iterator.hasNext();){
-            assertEquals(++i,(int)iterator.next());
-        }
+        Iterator<Integer> iterator = treeSet.iterator();
+        assertEquals(1, (int)iterator.next());
+        assertEquals(2, (int)iterator.next());
+        assertEquals(3, (int)iterator.next());
     }
 
     @Test
