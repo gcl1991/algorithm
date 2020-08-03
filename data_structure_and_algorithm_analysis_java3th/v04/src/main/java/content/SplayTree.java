@@ -1,225 +1,151 @@
-package content;// SplayTree class
-//
-// CONSTRUCTION: with no initializer
-//
-// ******************PUBLIC OPERATIONS*********************
-// void insert( x )       --> Insert x
-// void remove( x )       --> Remove x
-// boolean contains( x )  --> Return true if x is found
-// Comparable findMin( )  --> Return smallest item
-// Comparable findMax( )  --> Return largest item
-// boolean isEmpty( )     --> Return true if empty; else false
-// void makeEmpty( )      --> Remove all items
-// ******************ERRORS********************************
-// Throws UnderflowException as appropriate
-
+package content;
 /**
- * Implements a top-down splay tree.
- * Note that all "matching" is based on the compareTo method.
- * @author Mark Allen Weiss
- */
-public class SplayTree<AnyType extends Comparable<? super AnyType>>
-{
-    /**
-     * Construct the tree.
-     */
-    public SplayTree( )
-    {
-        nullNode = new BinaryNode<AnyType>( null );
+ * 内部类：与二叉树相同
+ * 增删查：任何查询操作均将被查询节点上游至根节点，
+ * 删除节点：先将待删除节点上游至根，再将左子树最大值节点上游至根从而与右子树结合成新树（或从右子树中上游最小节点至根）
+ * 所有的查询和删除操作在树为空的情况下均报错（空树root=nullNode）
+ * 伸展操作：可接受空树（不过输入空树也没意义,当节点不存在时，副作用是将其理论上的父节点上游至根）。
+ * 插入操作：
+ * （1）上游x理论上的父节点至根，插入新节点作为新根
+ * （2）将父节点上游至根再将子节点插入与直接将子节点上游只根是不同的，但是由于路径的相同，形成的树是有一定相似性的。
+ * （3）保证树永远是满二叉树，所有的叶节点均指向nullNode，所有的插入均发生再非叶节点
+ * */
+public class SplayTree<T extends Comparable<? super T>> {
+    private BinaryNode<T> newNode = null;  // Used between different inserts
+    private BinaryNode<T> header = new BinaryNode<T>(null); // For splay
+    private BinaryNode<T> root;
+    private BinaryNode<T> nullNode;
+
+
+    public SplayTree() {
+        nullNode = new BinaryNode<T>(null);
         nullNode.left = nullNode.right = nullNode;
         root = nullNode;
     }
 
-    private BinaryNode<AnyType> newNode = null;  // Used between different inserts
-    
-    /**
-     * Insert into the tree.
-     * @param x the item to insert.
-     */
-    public void insert( AnyType x )
-    {
-        if( newNode == null )
-            newNode = new BinaryNode<AnyType>( null );
+    // 增
+    public void insert(T x) {
+        if (newNode == null)
+            newNode = new BinaryNode<T>(null);
         newNode.element = x;
-
-        if( root == nullNode )
-        {
+        if (root == nullNode) {
             newNode.left = newNode.right = nullNode;
-            root = newNode;
-        }
-        else
-        {
-            root = splay( x, root );
-			
-			int compareResult = x.compareTo( root.element );
-			
-            if( compareResult < 0 )
-            {
+            root = newNode; // 只具有一个元素时，左右子树均指向nullNode
+        } else {
+            root = splay(x, root); // 上游x理论上的父节点至根
+            int compareResult = x.compareTo(root.element);
+            if (compareResult < 0) {
                 newNode.left = root.left;
                 newNode.right = root;
                 root.left = nullNode;
+                // 保证树永远是满二叉树，所有的叶节点均指向nullNode，所有的插入均发生再非叶节点
                 root = newNode;
-            }
-            else
-            if( compareResult > 0 )
-            {
+            } else if (compareResult > 0) {
                 newNode.right = root.right;
                 newNode.left = root;
                 root.right = nullNode;
                 root = newNode;
-            }
-            else
-                return;   // No duplicates
+            } else
+                return;
         }
-        newNode = null;   // So next insert will call new
+        newNode = null;
     }
 
-    /**
-     * Remove from the tree.
-     * @param x the item to remove.
-     */
-    public void remove( AnyType x )
-    {
-        if( !contains( x ) )
+    // 删
+    public void remove(T x) {
+        if (!contains(x)) // ！！！副作用，将x上游至根节点
             return;
 
-        BinaryNode<AnyType> newTree;
+        BinaryNode<T> newTree;
 
-            // If x is found, it will be splayed to the root by contains
-        if( root.left == nullNode )
+        if (root.left == nullNode)
             newTree = root.right;
-        else
-        {
-            // Find the maximum in the left subtree
-            // Splay it to the root; and then attach right child
+        else {
             newTree = root.left;
-            newTree = splay( x, newTree );
+            newTree = splay(x, newTree);  // 从左子树中找出最大值点作为新根
             newTree.right = root.right;
         }
         root = newTree;
     }
 
-    /**
-     * Find the smallest item in the tree.
-     * Not the most efficient implementation (uses two passes), but has correct
-     *     amortized behavior.
-     * A good alternative is to first call find with parameter
-     *     smaller than any item in the tree, then call findMin.
-     * @return the smallest item or throw UnderflowException if empty.
-     */
-    public AnyType findMin( ) throws UnderflowException {
-        if( isEmpty( ) )
-            throw new UnderflowException( );
-
-        BinaryNode<AnyType> ptr = root;
-
-        while( ptr.left != nullNode )
-            ptr = ptr.left;
-
-        root = splay( ptr.element, root );
-        return ptr.element;
-    }
-
-    /**
-     * Find the largest item in the tree.
-     * Not the most efficient implementation (uses two passes), but has correct
-     *     amortized behavior.
-     * A good alternative is to first call find with parameter
-     *     larger than any item in the tree, then call findMax.
-     * @return the largest item or throw UnderflowException if empty.
-     */
-    public AnyType findMax( ){
-        if( isEmpty( ) )
-            throw new UnderflowException( );
-
-        BinaryNode<AnyType> ptr = root;
-
-        while( ptr.right != nullNode )
-            ptr = ptr.right;
-
-        root = splay( ptr.element, root );
-        return ptr.element;
-    }
-
-    /**
-     * Find an item in the tree.
-     * @param x the item to search for.
-     * @return true if x is found; otherwise false.
-     */
-    public boolean contains( AnyType x )
-    {
-        if( isEmpty( ) )
-            return false;
-			
-        root = splay( x, root );
-
-        return root.element.compareTo( x ) == 0;
-    }
-
-    /**
-     * Make the tree logically empty.
-     */
-    public void makeEmpty( )
-    {
+    public void makeEmpty() {
         root = nullNode;
     }
 
-    /**
-     * Test if the tree is logically empty.
-     * @return true if empty, false otherwise.
-     */
-    public boolean isEmpty( )
-    {
+    // 查
+    public T findMin() throws UnderflowException {
+        if (isEmpty())
+            throw new UnderflowException();
+
+        BinaryNode<T> ptr = root;
+
+        while (ptr.left != nullNode)
+            ptr = ptr.left;
+
+        root = splay(ptr.element, root);
+        return ptr.element;
+    }
+
+    public T findMax() {
+        if (isEmpty())
+            throw new UnderflowException();
+
+        BinaryNode<T> ptr = root;
+
+        while (ptr.right != nullNode)
+            ptr = ptr.right;
+
+        root = splay(ptr.element, root);
+        return ptr.element;
+    }
+
+    public boolean contains(T x) {
+        if (isEmpty())
+            return false;
+
+        root = splay(x, root);
+
+        return root.element.compareTo(x) == 0;
+    }
+
+    public boolean isEmpty() {
         return root == nullNode;
     }
 
-    private BinaryNode<AnyType> header = new BinaryNode<AnyType>( null ); // For splay
-    
-    /**
-     * Internal method to perform a top-down splay.
-     * The last accessed node becomes the new root.
-     * @param x the target item to splay around.
-     * @param t the root of the subtree to splay.
-     * @return the subtree after the splay.
-     */
-    private BinaryNode<AnyType> splay( AnyType x, BinaryNode<AnyType> t )
-    {
-        BinaryNode<AnyType> leftTreeMax, rightTreeMin;
+    // 伸展操作
+    private BinaryNode<T> splay(T x, BinaryNode<T> t) {
+        BinaryNode<T> leftTreeMax, rightTreeMin;
 
         header.left = header.right = nullNode;
         leftTreeMax = rightTreeMin = header;
+        // leftTreeMax只操作其右指針，rightTreeMin只操作其左指針
 
-        nullNode.element = x;   // Guarantee a match
+        nullNode.element = x;   // Guarantee a match保证一个匹配,
 
-        for( ; ; )
-        {
-			int compareResult = x.compareTo( t.element );
-			
-            if( compareResult < 0 )
-            {
-                if( x.compareTo( t.left.element ) < 0 )
-                    t = rotateWithLeftChild( t );
-                if( t.left == nullNode )
+        while (true) {
+            int compareResult = x.compareTo(t.element);
+
+            if (compareResult < 0) {
+                if (x.compareTo(t.left.element) < 0)
+                    t = rotateWithLeftChild(t);
+                if (t.left == nullNode)
                     break;
                 // Link Right
                 rightTreeMin.left = t;
                 rightTreeMin = t;
                 t = t.left;
-            }
-            else if( compareResult > 0 )
-            {
-                if( x.compareTo( t.right.element ) > 0 )
-                    t = rotateWithRightChild( t );
-                if( t.right == nullNode )
+            } else if (compareResult > 0) {
+                if (x.compareTo(t.right.element) > 0)
+                    t = rotateWithRightChild(t);
+                if (t.right == nullNode)
                     break;
                 // Link Left
                 leftTreeMax.right = t;
                 leftTreeMax = t;
                 t = t.right;
-            }
-            else
+            } else
                 break;
-        }	
+        }
 
         leftTreeMax.right = t.left;
         rightTreeMin.left = t.right;
@@ -228,82 +154,40 @@ public class SplayTree<AnyType extends Comparable<? super AnyType>>
         return t;
     }
 
-    /**
-     * Rotate binary tree node with left child.
-     * For AVL trees, this is a single rotation for case 1.
-     */
-    private static <AnyType> BinaryNode<AnyType> rotateWithLeftChild( BinaryNode<AnyType> k2 )
-    {
-        BinaryNode<AnyType> k1 = k2.left;
+
+    private static <T> BinaryNode<T> rotateWithLeftChild(BinaryNode<T> k2) {
+        BinaryNode<T> k1 = k2.left;
         k2.left = k1.right;
         k1.right = k2;
         return k1;
     }
 
-    /**
-     * Rotate binary tree node with right child.
-     * For AVL trees, this is a single rotation for case 4.
-     */
-    private static <AnyType> BinaryNode<AnyType> rotateWithRightChild( BinaryNode<AnyType> k1 )
-    {
-        BinaryNode<AnyType> k2 = k1.right;
+
+    private static <T> BinaryNode<T> rotateWithRightChild(BinaryNode<T> k1) {
+        BinaryNode<T> k2 = k1.right;
         k1.right = k2.left;
         k2.left = k1;
         return k2;
     }
 
-    // Basic node stored in unbalanced binary search trees
-    private static class BinaryNode<AnyType>
-    {
-            // Constructors
-        BinaryNode( AnyType theElement )
-        {
-            this( theElement, null, null );
+    // 内部类
+    private static class BinaryNode<T> {
+        T element;
+        BinaryNode<T> left;
+        BinaryNode<T> right;
+
+        BinaryNode(T theElement) {
+            this(theElement, null, null);
         }
 
-        BinaryNode( AnyType theElement, BinaryNode<AnyType> lt, BinaryNode<AnyType> rt )
-        {
-            element  = theElement;
-            left     = lt;
-            right    = rt;
+        BinaryNode(T theElement, BinaryNode<T> lt, BinaryNode<T> rt) {
+            element = theElement;
+            left = lt;
+            right = rt;
         }
 
-        AnyType element;            // The data in the node
-        BinaryNode<AnyType> left;   // Left child
-        BinaryNode<AnyType> right;  // Right child
     }
 
-    private BinaryNode<AnyType> root;
-    private BinaryNode<AnyType> nullNode;
-    
 
-        // Test program; should print min and max and nothing else
-    public static void main( String [ ] args )
-    {
-        SplayTree<Integer> t = new SplayTree<Integer>( );
-        final int NUMS = 40000;
-        final int GAP  =   307;
-
-        System.out.println( "Checking... (no bad output means success)" );
-
-        for( int i = GAP; i != 0; i = ( i + GAP ) % NUMS )
-            t.insert( i );
-        System.out.println( "Inserts complete" );
-
-        for( int i = 1; i < NUMS; i += 2 )
-            t.remove( i );
-        System.out.println( "Removes complete" );
-
-        if( t.findMin( ) != 2 || t.findMax( ) != NUMS - 2 )
-            System.out.println( "FindMin or FindMax error!" );
-
-        for( int i = 2; i < NUMS; i += 2 )
-            if( !t.contains( i ) )
-                System.out.println( "Error: find fails for " + i );
-
-        for( int i = 1; i < NUMS; i += 2 )
-            if( t.contains( i ) )
-                System.out.println( "Error: Found deleted item " + i );
-    }
 }
 

@@ -22,7 +22,7 @@ import java.util.NoSuchElementException;
  * Note that all "matching" is based on the compareTo method.
  */
 public class BinarySearchTree<T extends Comparable<? super T>> {
-    private BinaryNode<T> root;
+    protected BinaryNode<T> root;
     private Comparator<? super T> cmp;
 
     public BinarySearchTree() {
@@ -180,20 +180,20 @@ public class BinarySearchTree<T extends Comparable<? super T>> {
     /**
      * 节点内部类
      */
-    private static class BinaryNode<T> {
-        BinaryNode(T theElement) {
+     public static class BinaryNode<T> {
+        public BinaryNode(T theElement) {
             this(theElement, null, null);
         }
 
-        BinaryNode(T theElement, BinaryNode<T> lt, BinaryNode<T> rt) {
+        public BinaryNode(T theElement, BinaryNode<T> lt, BinaryNode<T> rt) {
             element = theElement;
             left = lt;
             right = rt;
         }
 
-        T element;
-        BinaryNode<T> left;
-        BinaryNode<T> right;
+        public T element;
+        public BinaryNode<T> left;
+        public BinaryNode<T> right;
     }
 
 
