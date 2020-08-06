@@ -50,4 +50,16 @@ public class E38Test {
         assertEquals(tree.getCoordinateXNoStatus(6), 6);
         assertEquals(tree.getCoordinateXNoStatus(7), 7);
     }
+
+    @Test
+    public void testCoordinateYNoStatus(){
+        E38<Integer> tree = new E38<>(root);
+        assertEquals(tree.getCoordinateYNoStatus(4), 0);
+        assertEquals(tree.getCoordinateYNoStatus(2), 1);
+        assertEquals(tree.getCoordinateYNoStatus(6), 1);
+        assertEquals(tree.getCoordinateYNoStatus(1), 2);
+        assertEquals(tree.getCoordinateYNoStatus(3), 2);
+        assertEquals(tree.getCoordinateYNoStatus(5), 2);
+        assertEquals(tree.getCoordinateYNoStatus(7), 2);
+    }
 }
