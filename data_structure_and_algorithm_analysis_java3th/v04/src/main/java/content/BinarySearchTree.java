@@ -14,6 +14,8 @@ package content;
 // ******************ERRORS********************************
 // Throws UnderflowException as appropriate
 
+import com.google.common.base.Objects;
+
 import java.util.Comparator;
 import java.util.NoSuchElementException;
 
@@ -181,6 +183,10 @@ public class BinarySearchTree<T extends Comparable<? super T>> {
      * 节点内部类
      */
      public static class BinaryNode<T> {
+        public T element;
+        public BinaryNode<T> left;
+        public BinaryNode<T> right;
+
         public BinaryNode(T theElement) {
             this(theElement, null, null);
         }
@@ -191,9 +197,24 @@ public class BinarySearchTree<T extends Comparable<? super T>> {
             right = rt;
         }
 
-        public T element;
-        public BinaryNode<T> left;
-        public BinaryNode<T> right;
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) {
+                return true;
+            }
+            if (o == null || getClass() != o.getClass()) {
+                return false;
+            }
+            BinaryNode<?> that = (BinaryNode<?>) o;
+            return Objects.equal(element, that.element);
+        }
+
+        @Override
+        public int hashCode() {
+            return Objects.hashCode(element);
+        }
+
     }
 
 

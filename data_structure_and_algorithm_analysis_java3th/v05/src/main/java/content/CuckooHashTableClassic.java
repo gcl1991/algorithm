@@ -1,3 +1,5 @@
+package content;
+
 import java.util.HashSet;
 
 
@@ -32,7 +34,7 @@ public class CuckooHashTableClassic<AnyType>
      * Construct the hash table.
      * @param size the approximate initial size.
      */
-    public CuckooHashTableClassic( HashFamily<? super AnyType> hf, int size )
+    public CuckooHashTableClassic(HashFamily<? super AnyType> hf, int size )
     {
         hashFunctions = hf;
         numHashFunctions = hf.getNumberOfFunctions( );

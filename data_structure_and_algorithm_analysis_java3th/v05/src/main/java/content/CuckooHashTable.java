@@ -1,3 +1,5 @@
+package content;
+
 import java.util.Random;
 
 // Cuckoo Hash table class
@@ -33,7 +35,7 @@ public class CuckooHashTable<AnyType>
      * @param hf the hash family
      * @param size the approximate initial size.
      */
-    public CuckooHashTable( HashFamily<? super AnyType> hf, int size )
+    public CuckooHashTable(HashFamily<? super AnyType> hf, int size )
     {
         allocateArray( nextPrime( size ) );
         doClear( );

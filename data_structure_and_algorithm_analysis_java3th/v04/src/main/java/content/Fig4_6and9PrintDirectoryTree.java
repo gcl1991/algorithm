@@ -2,6 +2,8 @@ package content;
 
 import java.io.File;
 
+import static Helpers.StringHelpers.stringMultiplication;
+
 // dir file dirname filename path
 public class Fig4_6and9PrintDirectoryTree {
     public static void listAll(int depth, String fileString) {
@@ -13,14 +15,6 @@ public class Fig4_6and9PrintDirectoryTree {
                 listAll(depth + 1, subFileString);
             }
         }
-    }
-
-    private static String stringMultiplication(String string, int digit) {
-        StringBuilder stringBuilder = new StringBuilder();
-        for (int i = 0; i < digit; i++) {
-            stringBuilder.append(string);
-        }
-        return stringBuilder.toString();
     }
 
     public static long sizeAll(int depth,String pathString){
