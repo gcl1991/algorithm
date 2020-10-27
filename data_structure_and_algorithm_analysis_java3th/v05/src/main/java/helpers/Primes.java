@@ -1,6 +1,9 @@
 package helpers;
 
 public class Primes {
+    private Primes() {
+    }
+
     public static int nextPrime(int n) {
         // 下一个素数
         if (isPrime(n))
@@ -17,12 +20,14 @@ public class Primes {
         if (n == 2 || n == 3)
             return true;
         // 排除1和偶数
-        if (n == 1 || (n & 2) == 0)
+        if (n == 1 || (n & 1) == 0)
             return false;
         // 测试3-平方根内奇数
         for (int i = 3; i * i <= n; i += 2)
-            if (n % i == 0)
+            if (n % i == 0){
+                System.out.println(i);
                 return false;
+            }
         return true;
     }
 

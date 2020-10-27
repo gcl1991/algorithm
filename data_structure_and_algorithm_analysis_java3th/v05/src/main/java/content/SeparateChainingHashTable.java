@@ -33,6 +33,7 @@ public class SeparateChainingHashTable<AnyType> {
      * @param size approximate table size.
      */
     public SeparateChainingHashTable(int size) {
+        // 为什么用链表？
         theLists = new LinkedList[nextPrime(size)];
         for (int i = 0; i < theLists.length; i++)
             theLists[i] = new LinkedList<>();
@@ -48,10 +49,11 @@ public class SeparateChainingHashTable<AnyType> {
         List<AnyType> whichList = theLists[myhash(x)];
         if (!whichList.contains(x)) {
             whichList.add(x);
-
-            // Rehash; see Section 5.5
             if (++currentSize > theLists.length)
                 rehash();
+            // 问：为什么放到add之后而不是之前？
+            // 答：为了保持函数的原子性，如果add抛出异常，则破坏了函数原子性。
+            // Rehash; see Section 5.5
         }
     }
 
@@ -138,6 +140,7 @@ public class SeparateChainingHashTable<AnyType> {
     /**
      * The array of Lists.
      */
+    // 为什么用数组？因为需要O(1)快速查找，是否可以用ArrayList？
     private List<AnyType>[] theLists;
     private int currentSize;
 
@@ -174,7 +177,6 @@ public class SeparateChainingHashTable<AnyType> {
         for (int i = 3; i * i <= n; i += 2)
             if (n % i == 0)
                 return false;
-
         return true;
     }
 }

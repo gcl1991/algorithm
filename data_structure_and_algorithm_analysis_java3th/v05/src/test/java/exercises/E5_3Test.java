@@ -1,37 +1,36 @@
 package exercises;
 
+import helpers.Primes;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
 public class E5_3Test {
-    public static List<Integer> array = new ArrayList<>();
+    public static Set<Integer> set = new HashSet<>();
 
     @BeforeClass
     public static void init() {
         Random rd = new Random();
-        int length = 100;
-        for (int i = 0; i < length; i++) {
-            array.add(rd.nextInt());
+        int length = 101;
+        while (set.size() < length) {
+            set.add(rd.nextInt());
         }
     }
 
     @Test
-    public void testSeparateInsert() {
-        E5_3.SeparateChaining<Integer> si = new E5_3.SeparateChaining<>();
-        array.forEach(si::insert);
-        System.out.println(si.clashCount);
+    public void testQuadraticProbing() {
+        E5_3.QuadraticProbing<Integer> qp = new E5_3.QuadraticProbing<>();
+        set.forEach(qp::insert);
+        System.out.println(qp.clashCount);
     }
 
     @Test
-    public void testQuadraticProbing(){
-        E5_3.QuadraticProbing<Integer> qp=new E5_3.QuadraticProbing<>();
-        array.forEach(qp::insert);
-        System.out.println(qp.clashCount);
+    public void testLinearProbing() {
+        E5_3.LinearProbing<Integer> lp = new E5_3.LinearProbing<>();
+        set.forEach(lp::insert);
+//        System.out.println(lp.size);
+//        System.out.println(lp.clashCount);
     }
 }
