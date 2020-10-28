@@ -1,7 +1,5 @@
 package exercises;
 
-import helpers.Primes;
-import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
@@ -13,7 +11,7 @@ public class E5_3Test {
     @BeforeClass
     public static void init() {
         Random rd = new Random();
-        int length = 101;
+        int length = 108;
         while (set.size() < length) {
             set.add(rd.nextInt());
         }
@@ -30,7 +28,6 @@ public class E5_3Test {
     public void testLinearProbing() {
         E5_3.LinearProbing<Integer> lp = new E5_3.LinearProbing<>();
         set.forEach(lp::insert);
-//        System.out.println(lp.size);
-//        System.out.println(lp.clashCount);
+        System.out.println(lp.clashCount);
     }
 }

@@ -77,21 +77,29 @@ public class E5_3 {
         private static final int DEFAULT_TABLE_SIZE = 101;
         private T[] array;
         public int size;
+        public int clashCount;
 
         LinearProbing() {
             this(DEFAULT_TABLE_SIZE);
         }
 
-        @SuppressWarnings("unchecked")
         LinearProbing(int size) {
+            allocate(size);
+        }
+
+        @SuppressWarnings("unchecked")
+        void allocate(int size) {
             array = (T[]) new Object[size];
         }
 
         void insert(T x) {
             int pos = findPos(x);
-            if(array[pos]==null){
+            if (array[pos] == null) {
                 array[pos] = x;
                 size++;
+            }
+            if (size > array.length / 2) {
+                rehash();
             }
         }
 
@@ -102,10 +110,18 @@ public class E5_3 {
                 if (currentPos >= array.length) {
                     currentPos -= array.length;
                 }
+                clashCount++;
             }
             return currentPos;
         }
 
-
+        void rehash() {
+            T[] oldArray = array;
+            allocate(2 * array.length);
+            size = 0;
+            Arrays.stream(oldArray)
+                    .filter(Objects::nonNull)
+                    .forEach(this::insert);
+        }
     }
 }

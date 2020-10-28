@@ -25,7 +25,6 @@ public class Primes {
         // 测试3-平方根内奇数
         for (int i = 3; i * i <= n; i += 2)
             if (n % i == 0){
-                System.out.println(i);
                 return false;
             }
         return true;
