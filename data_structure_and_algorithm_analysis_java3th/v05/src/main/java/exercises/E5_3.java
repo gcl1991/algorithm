@@ -1,7 +1,6 @@
 package exercises;
 
 import helpers.Hashs;
-import helpers.Primes;
 
 import java.util.*;
 
@@ -35,7 +34,7 @@ public class E5_3 {
                 ++size;
             array[currentPos] = x;
 
-            if (size > array.length / 2)
+            if (size > (array.length >> 1))
                 rehash();
 
             return true;
@@ -45,7 +44,7 @@ public class E5_3 {
             T[] oldArray = array;
 
             // Create a new double-sized, empty table
-            allocateArray(2 * oldArray.length);
+            allocateArray(oldArray.length << 1);
             size = 0;
 
             // Copy table over
@@ -84,12 +83,12 @@ public class E5_3 {
         }
 
         LinearProbing(int size) {
-            allocate(size);
+            allocateArray(size);
         }
 
         @SuppressWarnings("unchecked")
-        void allocate(int size) {
-            array = (T[]) new Object[size];
+        void allocateArray(int size) {
+            array = (T[]) new Object[nextPrime(size)];
         }
 
         void insert(T x) {
@@ -98,7 +97,7 @@ public class E5_3 {
                 array[pos] = x;
                 size++;
             }
-            if (size > array.length / 2) {
+            if (size > (array.length >> 1)) {
                 rehash();
             }
         }
@@ -117,7 +116,67 @@ public class E5_3 {
 
         void rehash() {
             T[] oldArray = array;
-            allocate(2 * array.length);
+            allocateArray(2 * array.length);
+            size = 0;
+            Arrays.stream(oldArray)
+                    .filter(Objects::nonNull)
+                    .forEach(this::insert);
+        }
+    }
+
+    public static class DoubleHash<T> {
+        private static final int DEFAULT_TABLE_SIZE = 101;
+        private static final int R = 27;
+        private T[] array;
+        private int size;
+        public  int clashCount;
+
+        DoubleHash() {
+            this(DEFAULT_TABLE_SIZE);
+        }
+
+        DoubleHash(int size) {
+            allocateArray(size);
+        }
+
+        @SuppressWarnings("unchecked")
+        void allocateArray(int size) {
+            array = (T[]) new Object[nextPrime(size)];
+        }
+
+        void insert(T x) {
+            int pos = findPos(x);
+            if (array[pos] == null) {
+                array[pos] = x;
+                size++;
+            }
+            if (size > (array.length >> 1)) {
+                rehash();
+            }
+        }
+
+        int findPos(T x) {
+            int pos = Hashs.myhash(x, array.length);
+            int i = 1;
+            int h2 = hash2(x);
+            while (array[pos] != null && !array[pos].equals(x)) {
+                pos = i * h2;
+                if (pos > array.length) {
+                    pos -= array.length;
+                }
+                i++;
+                clashCount++;
+            }
+            return pos;
+        }
+
+        int hash2(T x) {
+            return R - x.hashCode() % R;
+        }
+
+        void rehash() {
+            T[] oldArray = array;
+            allocateArray(array.length << 1);
             size = 0;
             Arrays.stream(oldArray)
                     .filter(Objects::nonNull)
