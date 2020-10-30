@@ -1,22 +1,8 @@
 package exercises;
 
-import org.junit.BeforeClass;
 import org.junit.Test;
 
-import java.util.*;
-
-public class E5_3Test {
-    public static Set<Integer> set = new HashSet<>();
-
-    @BeforeClass
-    public static void init() {
-        Random rd = new Random();
-        int length = 108;
-        while (set.size() < length) {
-            set.add(rd.nextInt());
-        }
-    }
-
+public class E5_3Test extends BaseTest{
     @Test
     public void testQuadraticProbing() {
         E5_3.QuadraticProbing<Integer> qp = new E5_3.QuadraticProbing<>();

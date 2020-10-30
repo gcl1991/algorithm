@@ -33,7 +33,10 @@ public class SeparateChainingHashTable<AnyType> {
      * @param size approximate table size.
      */
     public SeparateChainingHashTable(int size) {
-        // 为什么用链表？
+        // 问：为什么用链表？
+        // 因为便于在O(1)时间插入
+        // 问：是否可以用ArrayList代替数组
+        // 不可以，List接口无法获取Table Size，同时List的size()方法容易引起编程错误
         theLists = new LinkedList[nextPrime(size)];
         for (int i = 0; i < theLists.length; i++)
             theLists[i] = new LinkedList<>();
