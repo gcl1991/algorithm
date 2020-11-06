@@ -6,7 +6,7 @@ import helpers.Primes;
 import java.lang.reflect.Array;
 import java.util.*;
 
-public class E4 {
+public class E5 {
     public static class SeparateChainingWithSingle<T> {
         private static final int DEFAULT_TABLE_SIZE = 101;
         private List<T>[] array;

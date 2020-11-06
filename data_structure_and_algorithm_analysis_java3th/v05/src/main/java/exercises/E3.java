@@ -6,7 +6,7 @@ import java.util.*;
 
 import static helpers.Primes.nextPrime;
 
-public class E5_3 {
+public class E3 {
     public static class QuadraticProbing<T> {
         private static final int DEFAULT_TABLE_SIZE = 101;
 

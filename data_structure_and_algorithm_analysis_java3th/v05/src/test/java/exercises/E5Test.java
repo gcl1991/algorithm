@@ -4,8 +4,8 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class E4Test extends BaseTest {
-    E4.SeparateChainingWithSingle<Integer> sc = new E4.SeparateChainingWithSingle<>();
+public class E5Test extends BaseTest {
+    E5.SeparateChainingWithSingle<Integer> sc = new E5.SeparateChainingWithSingle<>();
 
     @Test
     public void testInsert() {
