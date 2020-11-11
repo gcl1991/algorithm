@@ -11,7 +11,7 @@ public abstract class BaseTest {
     @BeforeClass
     public static void init() {
         Random rd = new Random();
-        int length = 108;
+        int length = 219;
         while (set.size() < length) {
             set.add(rd.nextInt());
         }

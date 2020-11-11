@@ -6,7 +6,7 @@ import java.util.*;
 
 import static helpers.Primes.nextPrime;
 
-public class E3 {
+public class E3and8 {
     public static class QuadraticProbing<T> {
         private static final int DEFAULT_TABLE_SIZE = 101;
 
@@ -20,6 +20,71 @@ public class E3 {
         }
 
         private QuadraticProbing(int size) {
+            allocateArray(size);
+        }
+
+        private void allocateArray(int size) {
+            array = (T[]) new Object[nextPrime(size)];
+        }
+
+        public boolean insert(T x) {
+            int currentPos = findPos(x);
+
+            if (array[currentPos] == null)
+                ++size;
+            array[currentPos] = x;
+
+            if (size > (array.length>>1))
+                rehash();
+
+            return true;
+        }
+
+        private void rehash() {
+            T[] oldArray = array;
+
+            // Create a new double-sized, empty table
+            allocateArray(oldArray.length << 1);
+            size = 0;
+
+            // Copy table over
+            for (T entry : oldArray)
+                if (entry != null)
+                    insert(entry);
+        }
+
+        // f(x)=x^2;
+        // f(x)=f(x-1)+2x-1
+        // 采用此公式计算x^2，以加法代替乘法提高计算速度
+        private int findPos(T x) {
+            int offset = 1;
+            int currentPos = Hashs.myhash(x, array.length);
+
+            while (array[currentPos] != null && !array[currentPos].equals(x)) {
+                currentPos += offset;  // Compute ith probe
+                offset += 2;
+                if (currentPos >= array.length)
+                    currentPos -= array.length;
+                clashCount++;
+            }
+
+            return currentPos;
+        }
+    }
+
+    public static class CubeProbing<T> {
+        private static final int DEFAULT_TABLE_SIZE = 101;
+
+        private T[] array;
+        // 标记有多少桶被占用
+        private int size;
+        public int clashCount;
+
+        public CubeProbing() {
+            this(DEFAULT_TABLE_SIZE);
+        }
+
+        private CubeProbing(int size) {
             allocateArray(size);
         }
 
@@ -58,13 +123,13 @@ public class E3 {
         // 采用此公式计算x^2，以加法代替乘法提高计算速度
         private int findPos(T x) {
             int offset = 1;
-            int currentPos = Hashs.myhash(x, array.length);
+            int pos = Hashs.myhash(x, array.length);
+            int currentPos = 0;
 
             while (array[currentPos] != null && !array[currentPos].equals(x)) {
-                currentPos += offset;  // Compute ith probe
-                offset += 2;
-                if (currentPos >= array.length)
-                    currentPos -= array.length;
+                currentPos = pos + offset * offset * offset;  // Compute ith probe
+                offset++;
+                currentPos %= array.length;
                 clashCount++;
             }
 
@@ -129,7 +194,7 @@ public class E3 {
         private static final int R = 27;
         private T[] array;
         private int size;
-        public  int clashCount;
+        public int clashCount;
 
         DoubleHash() {
             this(DEFAULT_TABLE_SIZE);
