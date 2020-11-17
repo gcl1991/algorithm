@@ -30,8 +30,10 @@ public class E13Test {
 
     @Test
     public void testPolynomialMultiplication() {
-        List<E13.Monomial> result = E13.Polynomial.multiply(sp1,sp2);
-        System.out.println(result.toString());
+        List<E13.Monomial> resultA = E13.Polynomial.multiplyA(sp1,sp2);
+        System.out.println(resultA.toString());
+        List<E13.Monomial> resultB = E13.Polynomial.multiplyB(sp1,sp2);
+        System.out.println(resultB.toString());
     }
 
     @Test
