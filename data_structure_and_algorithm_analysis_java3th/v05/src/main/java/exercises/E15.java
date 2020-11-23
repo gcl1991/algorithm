@@ -1,6 +1,6 @@
 package exercises;
 
-public class E14 {
+public class E15 {
     public static int findSubstringStartIndex(String string, String substring) {
         // 1 初始化参数
         int n = string.length();
